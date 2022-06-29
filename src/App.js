@@ -19,17 +19,26 @@ function App() {
           lg: "container.lg",
           md: "container.md",
           sm: "container.sm",
+          xs: "container.xs",
         }}
-        w={"container.xl"}
       >
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="customers">
-            <Route path="" element={<CustomersIndexPage />} index />
-            <Route path=":id" element={<SingleCustomerDetailsPage />} />
-            <Route path="create" element={<CreateCustomerPage />} />
-          </Route>
-        </Routes>
+        <Box
+          minW={{
+            base: "full",
+            md: "container.md",
+            xl: "container.xl",
+            lg: "container.lg",
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="customers">
+              <Route path="" element={<CustomersIndexPage />} index />
+              <Route path=":id" element={<SingleCustomerDetailsPage />} />
+              <Route path="create" element={<CreateCustomerPage />} />
+            </Route>
+          </Routes>
+        </Box>
       </Container>
     </Box>
   );

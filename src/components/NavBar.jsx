@@ -21,14 +21,20 @@ const NavBar = () => {
           lg: "container.lg",
           md: "container.md",
           sm: "container.sm",
+          xs: "container.xs",
         }}
-        w={"container.xl"}
       >
         <HStack
           justify={"space-between"}
           align={"center"}
           w={"full"}
           p={4}
+          minW={{
+            base: "full",
+            md: "container.md",
+            xl: "container.xl",
+            lg: "container.lg",
+          }}
           bg={bgColor}
         >
           <HStack spacing={4}>
@@ -40,7 +46,7 @@ const NavBar = () => {
 
             <Link to="/customers">
               <Text color={textColor} fontSize={"lg"} fontWeight={600}>
-                Digital Customers
+                Customers
               </Text>
             </Link>
           </HStack>
